@@ -1,0 +1,42 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kawendra Zpax</title>
+<style>
+body {
+  background:black;
+  color:#00ff66;
+  font-family:monospace;
+  padding:10px;
+}
+button {
+  background:black;
+  color:red;
+  border:1px solid red;
+  padding:10px;
+}
+</style>
+</head>
+<body>
+
+<pre id="term">
+> SYSTEM ONLINE
+> TIME: 02:41 AM
+> AWAITING COMMAND
+</pre>
+
+<button onclick="start()">START</button>
+
+<script>
+function start() {
+  const t = document.getElementById("term");
+  t.textContent += "\n> INITIALIZING MODULES...";
+  setTimeout(()=>t.textContent += "\n> CONNECTION SIMULATED",800);
+  setTimeout(()=>t.textContent += "\n> ERROR: ANOMALY DETECTED",1600);
+}
+</script>
+
+</body>
+</html>
